@@ -114,7 +114,7 @@ export default function Work() {
   return (
     <section id="work" className=" py-12">
       <h1 className="text-center text-3xl">Recent work and experiments</h1>
-      <div className="  px-32 md:my-12 md:grid grid-cols-3">
+      <div className=" px-10 md:px-32 md:my-12 md:grid grid-cols-3">
         {data.map((c) => (
           <Card key={c.id} img={c.img} github={c.github} demo={c.demo} />
         ))}

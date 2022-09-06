@@ -3,13 +3,15 @@ import Image from "next/image";
 
 function About() {
   return (
-    <div className="bg-black md:flex justify-around items-center">
-      <div className="flex justify-center items-center w-[40vw]">
+    <div className="bg-black flex flex-col md:flex-row md:flex justify-around items-center">
+      <div className="flex justify-center items-center my-20 md:my-0 w-[95vw] md:w-[40vw]">
         <Image alt="logo" src="/watermark.png" width={500} height={500} />
       </div>
       <div className="  ml-2 ">
-        <h1 className=" font-medium md:text-4xl mb-12">About Me</h1>
-        <p className="w-[35vw] text-2xl">
+        <h1 className=" font-medium my-5 md:my-0 text-center text-4xl md:mb-12">
+          About Me
+        </h1>
+        <p className=" w-[95vw] md:w-[35vw] text-2xl">
           Hey! I am Ritik a full-stack developer based in India. I love to
           design build and deploy. I do live coding on my{" "}
           <a
