@@ -5,7 +5,7 @@ const Footer = () => {
   let year = date.getFullYear();
 
   return (
-    <>
+    <section id="contact">
       <div>
         <div className="text-center text-2xl font-semibold">Find me on 😎</div>
         <div className="flex items-center justify-center">
@@ -42,7 +42,7 @@ const Footer = () => {
       <div className=" flex items-center justify-center text-black bg-green-500">
         Made with ❤️ in India &copy; {year}
       </div>
-    </>
+    </section>
   );
 };
 

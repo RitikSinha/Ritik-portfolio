@@ -12,8 +12,10 @@ function Nav() {
       <div className=" hidden md:flex items-center justify-around w-1/2">
         <a href="#"> Resume </a>
         <a href="#work"> Work</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
+        <a href="https://www.blog.konfav.com" target="_blank" rel="noreferrer">
+          Blog
+        </a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   );
