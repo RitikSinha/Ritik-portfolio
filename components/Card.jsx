@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const Card = ({ img, github, demo }) => {
+  const [ref, inView] = useInView();
+  const controls = useAnimation();
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, scale: 1 });
+    }
+  }, [controls, inView]);
   return (
-    <div className=" w-80 bg-neutral-900 rounded-md py-2 my-5 hover:scale-105 hover:transform-gpu">
+    <motion.div
+      className=" w-80 bg-neutral-900 rounded-md py-2 my-5 hover:scale-105 hover:transform-gpu"
+      ref={ref}
+      animate={controls}
+      initial={{ opacity: 0, scale: 0.5 }}
+      transition={{
+        duration: 3,
+        delay: 0.3,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
+    >
       <Image
         src={img}
         alt="thumnail"
@@ -28,7 +47,7 @@ const Card = ({ img, github, demo }) => {
           Demo
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
+
 export default function Work() {
   const [data, setData] = useState([
     {
@@ -111,6 +112,7 @@ export default function Work() {
       demo: "https://rode-clone-jsbootcamp.netlify.app/",
     },
   ]);
+
   return (
     <section id="work" className=" py-12">
       <h1 className="text-center text-3xl">Recent work and experiments</h1>
