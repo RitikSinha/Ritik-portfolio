@@ -23,7 +23,7 @@ const items = [
   {
     i: 1,
     text: "Resume",
-    link: "#",
+    link: "https://www.canva.com/design/DAFNolAX_E0/0-epyMWDATNmOS5SE7tteA/view",
   },
   {
     i: 2,
