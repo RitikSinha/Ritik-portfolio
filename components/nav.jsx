@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useScroll, motion, useCycle } from "framer-motion";
-
+import s from "./navigation/nav.module.css";
 // naviagation
 import { MenuItem } from "./navigation/MenuItem";
 import { MenuToggle } from "./navigation/MenuToggle";
@@ -41,9 +41,9 @@ function Nav() {
         animate={isOpen ? "open" : "closed"}
         custom={height}
         ref={containerRef}
-        className="md:hidden block"
+        className={`md:hidden block ${s.nav}`}
       >
-        <motion.div className="background" variants={sidebar} />
+        <motion.div className={s.background} variants={sidebar} />
         <Navigation />
         <MenuToggle toggle={() => toggleOpen()} />
       </motion.nav>
@@ -60,7 +60,14 @@ function Nav() {
       <div></div>
       <hr className="hidden w-1/2" />
       <div className=" hidden md:flex items-center justify-around w-1/2">
-        <a href="#"> Resume </a>
+        <a
+          href="https://www.canva.com/design/DAFNolAX_E0/0-epyMWDATNmOS5SE7tteA/view"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {" "}
+          Resume{" "}
+        </a>
         <a href="#work"> Work</a>
         <a href="https://blog.konfav.com/" target="_blank" rel="noreferrer">
           Blog

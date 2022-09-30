@@ -1,7 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
-
+import s from "./nav.module.css";
 const variants = {
   open: {
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -12,7 +12,7 @@ const variants = {
 };
 
 export const Navigation = () => (
-  <motion.ul variants={variants}>
+  <motion.ul className={s.ul} variants={variants}>
     {items.map((item) => (
       <MenuItem i={item.i} key={item.i} text={item.text} link={item.link} />
     ))}

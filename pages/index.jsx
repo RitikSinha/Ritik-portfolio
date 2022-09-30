@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Work, About, Nav, Hero, Footer } from "../components";
+import { TabsRender, About, Nav, Hero, Footer } from "../components";
 export default function Home() {
   return (
     <div>
@@ -13,7 +13,7 @@ export default function Home() {
         <Nav />
         <Hero />
         <About />
-        <Work />
+        <TabsRender />
         <Footer />
       </main>
     </div>

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
+import s from "./nav.module.css";
 
 const variants = {
   open: {
@@ -21,22 +22,24 @@ const variants = {
 const colors = ["#00ff6e", "#18f018", "#21ae17", "#27f45e", "#21e22e"];
 
 export const MenuItem = ({ i, text, link }) => {
+  console.log(text, link);
   const style = { border: `2px solid ${colors[i]}` };
   return (
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
+      className={s.li}
     >
-      {text === "Blog" ? (
+      {text === "Blog" || text === "Resume" ? (
         <a href={link} target="_blank" rel="noreferrer">
-          <div className="text-placeholder" style={style}>
+          <div className={s.text_placeholder} style={style}>
             <h1 className="text-black">{text}</h1>
           </div>
         </a>
       ) : (
         <a href={`#${link}`}>
-          <div className="text-placeholder" style={style}>
+          <div className={s.text_placeholder} style={style}>
             <h1 className="text-black">{text}</h1>
           </div>
         </a>
