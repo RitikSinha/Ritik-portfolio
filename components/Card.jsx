@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-const Card = ({ img, github, demo }) => {
+const Card = ({ img, github, demo, text }) => {
   const [ref, inView] = useInView();
   const controls = useAnimation();
   useEffect(() => {
@@ -29,6 +29,7 @@ const Card = ({ img, github, demo }) => {
         width={717}
         height={376}
       />
+      <h1 className="text-center">{text}</h1>
       <div className="flex items-center justify-between px-2">
         <a
           target="_blank"
